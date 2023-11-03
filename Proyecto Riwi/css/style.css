@@ -1,0 +1,231 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: monospace;
+    font-size: 62.5%;
+}
+html {
+    font-size: 62.5%;
+}
+#inicio {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.cabecera {
+    display: flex;
+    justify-content: space-between;  
+}
+.logo {
+    padding: 1rem 0 1rem 4rem;
+    color: #fff;
+}
+.logo h1 {
+    display: block;
+    font-family: monospace;
+    font-size: 2.8rem;
+    white-space: nowrap;
+    border-right: .3rem solid;
+    width: 14ch;
+    text-transform: uppercase;
+
+    animation: typing 2s steps(14),
+    blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+@keyframes typing {
+    from { width: 0 }
+}
+@keyframes blink {
+    50% { border-color: transparent;}
+}
+.navbar {
+    padding: 2rem;
+    width: auto;
+    position: relative;
+    color: #fff;
+}
+.menu {
+    width: 20rem;
+    position: absolute;
+    top: -28rem;
+    right: 0;
+    transition: 250ms;
+}
+.menu li {
+    list-style: none;
+    font-size: 2rem;
+       
+}
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 2rem 0 1rem 5rem;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.icono {
+    padding-top: 2rem; 
+    display: flex;
+}
+.icono i {
+    font-size: 2rem;
+    color: #fff;
+}
+.icono p {
+    color: #fff;
+    font-size: 1.5rem;
+    padding-right: 0.5rem;
+    font-weight: bold;
+}
+.checkbox, .icons {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+}
+.icons {
+    pointer-events: none;
+    font-size: 2rem;
+}
+.checkbox {
+    opacity: 0;  
+}
+.fa-xmark {
+    display: none;
+}
+.checkbox:checked ~ .fa-bars {
+    display: none;
+}
+.checkbox:checked ~ .fa-xmark {
+    display: block;
+}
+.checkbox:checked ~ .menu {
+    top: 5.5rem;
+}
+@media (min-width: 560px){
+    .checkbox, .fa-bars, .fa-xmark {
+        display: none;
+    }
+    .menu {
+        top: 0;
+        width: unset;
+        display: flex;
+        padding-right: 2rem;  
+    }
+    .menu li a {
+        padding: 1.5rem;
+        margin: 0;
+        color: #fff;
+    }
+    .menu li a:hover {
+        color: #04d912;
+        box-shadow: 0.5rem 0.5rem 1rem #0cc8f2;
+    }
+}
+.video video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;  
+}
+.video video::after {
+    content: "";
+    background-color: #000;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.info {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.info h2, .info h3 {
+    margin: 0 0 2rem;
+    font-family: monospace;
+}
+.info h2 {
+    font-size: 8rem;
+    text-transform: uppercase;
+}
+.info h3 {
+    font-size: 4rem;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+}
+#nosotros {
+    height: 100vh;
+    background-color: #000;
+}
+#servicios {
+    height: 100vh;
+    background-color: grey;
+}
+#contacto {
+    height: 100vh;
+    background-color: rgb(171, 175, 121);
+}
+
+@media screen and (max-width: 767px){
+    .cabecera {
+        width: 95%;
+    }
+    .info h2 {
+        font-size: 5rem;
+        text-transform: uppercase;
+    }
+    .info h3 {
+        font-size: 2rem;
+        text-transform: capitalize;
+        letter-spacing: 0.1rem;
+    }
+}
+.cont-nosotros {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+.nosotros-1, .nosotros-2 {
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+}
+.nosotros-1 h2 {
+    text-align: center;
+    padding: 3rem 0 2rem 0;
+    text-transform: uppercase;
+}
+.nosotros-1 h3 {
+    text-transform: capitalize;
+    padding: 2rem 0 1rem 0;
+}
+.nosotros-1 p {
+    padding: 2rem 0;
+}
+.img {
+    width: 40vw;
+    padding: 3rem 2rem 2rem 0;
+    
+    
+}
